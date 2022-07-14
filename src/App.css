@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  display: block;
+}
+.auth {
+  float: right;
+  border: 2px solid palevioletred;
+  width: 500px;
+  height: 80vh;
+  margin: 80px;
+  margin-bottom: 20px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.message {
+  border: 1px solid darkblue;
+  margin: 5px;
+  height: 25vh;
+
+}
+.forms {
+  border: 1px solid blueviolet;
+}
+.buttons {
+  border: 1px solid forestgreen;
+  margin: 5px;
+  height: 15vh;
+}
+.inputs {
+  border: 1px solid orange;
+  height: 15vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+.inputs input {
+  background-color: aliceblue;
+  border: 0.2px solid darkgoldenrod;
+  border-radius: 15px;
+  height: 40%;
+  width: 300px;
+  margin: 5px;
+}
+.inputs input:focus {
+  outline: 2px solid transparent;
+}
+.log {
+  height: 60px;
+  width: 250px;
+  border-radius: 10px;
+  font-size: x-large;
+}
+
