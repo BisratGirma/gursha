@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdShoppingCart } from 'react-icons/md';
 
 const Header = () => {
     return <header className='fixed z-50 w-screen bg-slate-300 p-6 px-16'>
@@ -29,11 +30,15 @@ const Header = () => {
             </ul>
             
             <div className='relative flex items-center justify-center'>
-                <p className='text-textColor text-2xl ml-8 cursor-pointer'>cart</p>
+                <MdShoppingCart className='text-textColor text-2xl ml-8 cursor-pointer'/>
+                {/* <p >cart</p> */}
                 <div className='absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg text-center'>
                     <p className='text-xs font-semibold'>3</p>
                 </div>
             </div> 
+
+            <p className='flex w-10 min-w-[40px] h-10 min-h-[40px] rounded-full text-white bg-random
+             drop-shadow-xl items-center justify-center cursor-pointer'>P</p>
             </div>
         </div>
         

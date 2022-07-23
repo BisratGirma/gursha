@@ -48,7 +48,10 @@ module.exports = {
       headingColor: 'orange',
       textColor: '#515151',
       cartNumBg: '#e80013',
-      primary: 'f5f2f2'
+      primaryColor: 'f5f2f2',
+      lightGray: 'lightgray',
+      white: 'white',
+      random: `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
     }
   },
   plugins: [],
