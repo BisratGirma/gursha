@@ -1,18 +1,28 @@
 {
-  "name": "react-lap",
-  "version": "0.1.0",
-  "private": true,
+  "name": "fam",
+  "packageManager": "yarn@3.2.2",
+  "description": "a food delivery app",
+  "version": "1.0.0",
+  "main": "firebase.config.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react-app-polyfill": "^3.0.0",
     "react-icons": "^4.4.0",
+    "react-dom": "^17.0.2",
+    "react": "^17.0.2",
+    "react-refresh": "^0.11.0",
+    "react-is": "^17.0.2",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.0"
+    "react-error-overlay": "^6.0.10",
+    "react-dev-utils": "^12.0.0",
+    "react-scripts": "^5.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,7 +48,6 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "tailwindcss": "^3.1.6"
-  }
+  "author": "Bisrat Girma",
+  "license": "ISC"
 }
