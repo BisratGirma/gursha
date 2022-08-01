@@ -26,7 +26,8 @@ const login = async () => {
 }
 
 const Auth = () => {
-    return (<div className='flex justify-center items-center w-56 h-80 bg-headingColor' onClick={() => login()}>
+    return (<div className='flex justify-center items-center w-56 h-80 bg-headingColor'
+    onClick={() => login()}>
     </div>)
 }
 

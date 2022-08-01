@@ -14,7 +14,9 @@ const App = () => {
                     {logo}
                 </div>
                 <NavBar />
-                <main className='fixed top-16  mt-1 flex md:left-24 md:w-[88%] lg:w-[91%] xl:w-[93%] w-full justify-center items-center border-solid border-2 border-y-textColor'>
+                <main className='fixed top-16  mt-1 flex md:left-24
+                md:w-[88%] lg:w-[91%] xl:w-[93%] w-full justify-center items-center
+                border-solid border-2 border-y-textColor' >
                     <Routes>
                         <Route path='/*' element={<MainContainer />} />
                         <Route path='/createItem' element={<CreateContainer />} />
