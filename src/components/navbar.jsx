@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link }  from 'react-router-dom'
 import {MdOutlineRestaurantMenu, MdPersonOutline, MdSettings, MdLogout ,MdOutlineDeliveryDining, MdOutlineNotifications} from 'react-icons/md'
 
 const NavBar = () => {
@@ -34,7 +33,7 @@ const NavBar = () => {
   return (
     <nav> 
     {/* desktop & tablet */}
-    <div className='hidden md:flex mt-1 fixed top-16 justify-between items-center flex-col w-24 h-90vh border-solid border-2 border-random'>
+    <div className='hidden md:flex mt-1 fixed top-16 justify-between items-center flex-col w-24 h-90vh'>
         <div className='mt-4'>
             {list}
         </div>
@@ -54,8 +53,8 @@ const NavBar = () => {
     
     {/* mobile */}
     <div className='flex md:hidden w-full'>
-        <div className='fixed -bottom-0 w-screen px-8 py-2 flex border-solid border-2 border-random'>
-            <div className='w-full border-2 border-headingColor'>
+        <div className='fixed -bottom-0 w-screen px-8 py-2 flexs'>
+            <div className='w-full'>
                 {list}
             </div>
         </div>

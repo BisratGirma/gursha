@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 // import { AnimatePresence } from 'framer-motion';
-import { NavBar, MainContainer, CreateContainer, Cart } from './components'
+import { NavBar, MainContainer, CreateContainer, Cart } from './components';
 
 
 const App = () => {
@@ -9,8 +9,8 @@ const App = () => {
     <p className='text-headingColor text-xl font-bold'>Gursha</p>
 </Link>
     return (
-            <div className='w-screen h-auto flex bg-primaryColor'>
-                <div className='absolute top-0 md:p-5 p-3 border-2 border-textColor'>
+            <div className='w-screen flex bg-primaryColor min-h-[20vh]'>
+                <div className='absolute top-0 md:p-5 p-3'>
                     {logo}
                 </div>
                 <NavBar />

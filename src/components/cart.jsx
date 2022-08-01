@@ -3,7 +3,7 @@ import { MdOutlineShoppingBag } from 'react-icons/md';
 // import { AnimatePresence, motion } from 'framer-motion';
 
 const Cart = () => {
-    return <div className='absolute -top-0 -right-0 flex p-4 mr-2 border-solid border-2 border-random'>
+    return <div className='absolute -top-0 -right-0 flex p-4 mr-2 border-solid'>
         
             <div className='relative flex items-center justify-center'>
                 <MdOutlineShoppingBag className='text-textColor text-2xl cursor-pointer'/>
