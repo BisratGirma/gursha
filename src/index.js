@@ -1,45 +1,47 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import { useDispatch, useSelector, Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom';
 import { getAuth, signInWithPopup, GoogleAuthProvider} from 'firebase/auth'
 import './index.css';
 
 import App from './app';
-import { StateProvider } from './context/state-provider';
-import { initialState } from './context/initial-state';
-import reducer from './context/reducer';
+import store from './store'
+import { log } from './context/slices';
 import { app } from './firebase.config';
 
-let authStatus = '';
-
-const login = async () => {
-    try {
-        const firebaseAuth = getAuth(app);
-        const provider = new GoogleAuthProvider();
-        const response = await signInWithPopup(firebaseAuth, provider);
-        authStatus = 'success';
-        console.log(response);
-    } catch (e) {
-        console.log(e)
-    }
-    
-}
 
 const Auth = () => {
+    const dispatch = useDispatch()
+
+    const login = () => {
+            const firebaseAuth = getAuth(app);
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(firebaseAuth, provider).then(result => {
+                dispatch(log({user: result.user}))
+                console.log(result);
+            }).catch((e) => {
+                console.log(e)
+            });    
+    }
+
     return (<div className='flex justify-center items-center w-56 h-80 bg-headingColor'
-    onClick={() => login()}>
+    onClick={() => login()} >
     </div>)
 }
 
 const Main = () => {
-    return (authStatus === 'success' ?
+    const user = useSelector(log)
+
+    return (user ?
     <BrowserRouter>
-     <StateProvider intialState={initialState} reducer={reducer}>
          <App />
-     </StateProvider>
  </BrowserRouter> : <Auth />)
 }
 
-ReactDom.render( <Main />
+ReactDom.render(
+<Provider store={store}>
+    <Main />
+</Provider>
 , document.getElementById('root'));
 
