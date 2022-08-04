@@ -25,13 +25,16 @@ const Auth = () => {
             });    
     }
 
-    return (<div className='flex justify-center items-center w-56 h-80 bg-headingColor'
+    return (<div className='flex justify-center items-center 
+    w-56 h-50 border-2 border-headingColor'
     onClick={() => login()} >
+    Sign in with Google
     </div>)
 }
 
 const Main = () => {
-    const user = useSelector(log)
+    const user = useSelector((state) => state.user)
+    console.log(user)
 
     return (user ?
     <BrowserRouter>
